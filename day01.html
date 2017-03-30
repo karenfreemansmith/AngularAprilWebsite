@@ -13,27 +13,50 @@
         </div>
       </a>
 			<h1>Day 1</h1>
+      <h2>Setting Up Your Workspace</h2>
+      <h3>Goals:</h3>
+      <ul>
+        <li>Set up your dev tools</li>
+        <li>Create 4 new Angular projects</li>
+        <li>Add Bootstrap or Material Design to the projects</li>
+        <li>Customize your projects with default page templates</li>
+      </ul>
+      
       <div class='iframe-wrap'>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/7EM46giYcH4" frameborder="0" allowfullscreen></iframe>
       </div>
-      <h3>Goals:</h3>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+
       <h3>Notes:</h3>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p>On Cloud 9:
+        <ul>
+          <li>use a blank project</li>
+          <li>update Node.js (nvm install 6.9.1, nvm alias default 6.9.1)</li>
+          <li>install Angular (npm install -g angular-cli)</li>
+          <li>create project by typing "ng new project1" on the command line (replace project1 with any name you like)
+          <li>open package.json file and find line for "start", change it to "start": --host 0.0.0.0 --port 8080 --live-reload-port 8081</li>
+          <li>test install by changing to the project directory and typing "npm start" on the command line and opening the preview window</li>
+        </ul>
+      </p>
+      <p>Change title in src/index.html</p>
+      <p>Change project name in arc/app/app.component.ts (the line that starts "title=")</p>
+      <p>(optional styling)
+      <p><em>Add the CDN link for Bootstrap (or any other css framework you like) to the &lt;head&gt; section of src/index.html</em></p>
+
+      <p><em>Add Material Design library with
+        <ul>
+          <li>command line (npm install --save @angular/material hammerjs, npm install --save-dev @types/hammerjs)</li>
+          <li>in tsconfig.js add "types": ["hammerjs"]</li>
+          <li>in main styles.css file add "@import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css';" (current prebuilt themes also include: indigo-pink, purple-green, or deeppurple-amber)</li>
+          <li>in main index.html add &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;</li>
+        </ul>
+      </em></p>
       <h3>Resources:</h3>
       <ul>
-        <li><a href="" target="_blank"></a></li>
-        <li><a href="" target="_blank"></a></li>
-        <li><a href="" target="_blank"></a></li>
-        <li><a href="" target="_blank"></a></li>
+        <li><a href="https://angular.io/" target="_blank">Official Angular Website</a></li>
+        <li><a href="https://c9.io" target="_blank">Cloud 9</a> (Free Online Workspace)</li>
+        <li><a href="https://material.angular.io/" target="_blank">Material Design for Angular</a> (Doumentation on available components and themes)</li>
+        <li><a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS Reference</a></li>
+        <li><a href="https://www.w3schools.com/tags/default.asp" target="_blank">HTML Reference</a></li>
       </ul>
       <h3>More Help</h3>
       <p>Share your project, ask questions, or help someone else on the <a href="https://www.facebook.com/groups/273657139727397/">Angular April - Facebook group page</a>.</p>

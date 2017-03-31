@@ -46,6 +46,11 @@
         <ul>
           <li>command line (npm install --save @angular/material hammerjs, npm install --save-dev @types/hammerjs)</li>
           <li>in tsconfig.js add "types": ["hammerjs"]</li>
+          <li>in app.module.ts add:
+            <br>import { MaterialModule } from '@angular/material';
+            <br>import 'hammerjs';
+            <br>...and down the page in the list of imports: MaterialModule
+          </li>
           <li>in main styles.css file add "@import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css';" (current prebuilt themes also include: indigo-pink, purple-green, or deeppurple-amber)</li>
           <li>in main index.html add &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"&gt;</li>
         </ul>

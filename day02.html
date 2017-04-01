@@ -27,16 +27,28 @@
       </div>
 
       <h3>Notes:</h3>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p>Creating components:</p>
+      <ul>
+        <li>mkdir src/app/components</li>
+        <li>cd src/app/copmonents</li>
+        <li>(make sure you are in the components directory before running this command) ng g component my-component</li>
+      </ul>
+      <p>Setting up routing in the app.module.ts file:</p>
+      <ul>
+        <li>import the router by adding: import { RouterModule } from '@angular/router';</li>
+        <li>at the end of the "imports" list add: RouterModule.forRoot([])</li>
+        <li>for each route, add a path (inside the forRoot array...): { path: 'my-component', component: MyComponent } </li>
+      </ul>
+      <p>Setting up routing on your pages: (app.component.html)</p>
+      <ul>
+        <li>place "&lt;router-outlet&gt;&lt;/router-outlet&gt;" where you want your components displayed on the page (typically the bottom under any navigation...)</li>
+        <li>add navigation links by replacing "href" with "routerLink": &lt;a routerLink="/about-me"&gt;About Me&lt;/a&gt;
+      </ul>
+
       <h3>Resources</h3>
       <ul>
-        <li><a href="" target="_blank"></a></li>
-        <li><a href="" target="_blank"></a></li>
-        <li><a href="" target="_blank"></a></li>
-        <li><a href="" target="_blank"></a></li>
+        <li><a href="https://angular.io/docs/ts/latest/guide/router.html" target="_blank">More about Routing with Angular</a></li>
+        <li><a href="https://angular.io/docs/ts/latest/guide/architecture.html" target="_blank">Angular Architecture - how components work in Angular</a></li>
       </ul>
       <h3>More Help</h3>
       <p>Share your project, ask questions, or help someone else on the <a href="https://www.facebook.com/groups/273657139727397/">Angular April - Facebook group page</a>.</p>

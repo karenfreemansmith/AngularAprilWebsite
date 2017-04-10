@@ -19,6 +19,7 @@
       <ul>
         <li>Identify reusable sub-components for project</li>
         <li>Create sub-components</li>
+        <li>Use routing to send data to another component</li>
         <li>Improve page layout and design</li>
       </ul>
 
@@ -27,10 +28,35 @@
       </div>
 
       <h3>Notes:</h3>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p>Pass data through a routerLink tag:
+        <ul>
+          <li>Modify app.module.ts
+            <ul>
+              <li>import { RouterModule, <strong>Routes</strong> } from '@angular/router';</li>
+              <li>{ path: 'profile<strong>/:name</strong>', component: ProfileComponent },</li>
+            </ul>
+          </li>
+          <li>Modify component.ts
+            <ul>
+              <li><strong>import { ActivatedRoute } from '@angular/router';</strong></li>
+              <li><strong>detail="";</strong></li>
+              <li>
+                <pre>
+                  constructor(<strong>private route: ActivatedRoute</strong>) {
+                    <strong>this.route.params.subscribe(params=>this.detail=params.detail);</strong>
+                  }
+                </pre>
+              </li>
+            </ul>
+          </li>
+          <li>Add {{detail}} to component.html</li>
+        </ul>
+      </p>
+
+      <h3>More Help</h3>
+      <p>Share your project, ask questions, or help someone else on the <a href="https://www.facebook.com/groups/273657139727397/">Angular April - Facebook group page</a>.</p>
+      <p>If you have a comment or suggestion for <strong>"Angular April"</strong> then send and email to: <a href="mailto:karenfreemansmith@gmail.com?Subject=Angular%20April"><em><strong>KarenFreemanSmith@gmail.com</strong></em></a> with the subject line: "Angular April".</p>
+
       <h3>Resources</h3>
       <ul>
         <li><a href="" target="_blank"></a></li>
@@ -38,10 +64,6 @@
         <li><a href="" target="_blank"></a></li>
         <li><a href="" target="_blank"></a></li>
       </ul>
-      <h3>More Help</h3>
-      <p>Share your project, ask questions, or help someone else on the <a href="https://www.facebook.com/groups/273657139727397/">Angular April - Facebook group page</a>.</p>
-      <p>If you have a comment or suggestion for <strong>"Angular April"</strong> then send and email to: <a href="mailto:karenfreemansmith@gmail.com?Subject=Angular%20April"><em><strong>KarenFreemanSmith@gmail.com</strong></em></a> with the subject line: "Angular April".</p>
-
 
   </body>
 </html>

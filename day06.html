@@ -42,7 +42,7 @@
               <li><strong>detail="";</strong></li>
               <li>
                 <pre>
-                  
+
   constructor(<strong>private route: ActivatedRoute</strong>) {
     <strong>this.route.params.subscribe(params=>this.detail=params.detail);</strong>
   }
@@ -50,7 +50,8 @@
               </li>
             </ul>
           </li>
-          <li>Add {{detail}} to component.html</li>
+          <li>Add <strong>{{detail}}</strong> to component.html</li>
+          <li>Modify your router link: <strong>[routerLink]="['/details', 'detail']"</strong></li>
         </ul>
       </p>
 

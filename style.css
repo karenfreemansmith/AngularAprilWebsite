@@ -30,6 +30,11 @@ p {
   font-size: 1em;
 }
 
+li strong {
+  font-weight: normal;
+  background: pink;
+}
+
 li {
   font-size: .9em;
 }
